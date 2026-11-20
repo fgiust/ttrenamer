@@ -1,0 +1,108 @@
+
+TrueType Renamer Version History
+================================
+
+
+----[1.00]------------------------------------------------------------------------
+- First released version!
+- Only 'cosmetic' changes and test on other systems (it works fine on Windows 
+  95/98/NT, 486, Pentium, Pentium II, AMD) and other font files (it correctly 
+  renames all my collection of about 3000 TrueType Fonts).
+- Fixed a lot of orthographic bugs...  ;]
+
+
+----[0.09]------------------------------------------------------------------------
+- Now TrueType Renamer can exactly recognize also special characters (the 
+  process is slightly slower)
+- As default now TrueType Renamer looks for the name in Micro$oft encoding.
+  It goes on in this way:
+	1. Micro$oft name in standard language (American English)
+	2. Micro$oft name in other languages
+	3. Macintosh name in standard language (American English)
+	4. Name in any encoding and language
+  Also TTFExt (TrueType Shell Extension) from Micro$oft doesn't go over the 
+  second step and display "FaceName not found". Following steps are added only 
+  for compatibility for font files in not correct format.
+- Now TrueType Renamer is slower but more accurate. On my Pentium 166 it 
+  takes, to rename 1000 font files (none of them already with correct name) 
+  about 33 seconds. 24 of them are used from operating system for renaming 
+  files. 9 seconds to find 1000 names, convert them, etc. are not so much... end 
+  of optimizations, more than this it's not possible, the speed of process depends 
+  largely from the drive speed.
+
+
+----[0.08]------------------------------------------------------------------------
+- Now an icon is displayed in the tray area to notify that TrueType Renamer is 
+  working
+- Check for read-only drives
+- Added error checks (files in use, folders moved after selection, etc.). 
+  Totally sure!
+- Added the possibility to stop the process after any error in accessing files
+- Added a counter of files renamed
+- Faster algorithm to find font's name
+
+"Bug": In some extremely rare case the file's name don't match exactly to 
+  font's name according to Window$. This can happen for font files that have the 
+  name stored with both Micro$oft and Macintosh encoding. These names should in 
+  theory be identical, but this is not always true. Window$ ever look for font names 
+  with Micro$oft encoding; TrueType Renamer accepts both for a faster process.
+
+Bug: TrueType Renamer can't correctly recognize some special characters in the font's
+  name (as the Trademark ™) if the name is stored in Unicode (Big Endian) format. 
+
+
+----[0.07]------------------------------------------------------------------------
+- Bug fixed! (it was because of Window$ that add '\' only after a file system 
+  ancestor and not after directories. (yes, I love Window$ API)
+- A little code optimization... slightly faster
+- It better recognizes non-TrueType files
+
+2do: Check if the user select a read-only drive
+2do: Message and/or cursor change during file renaming
+2do: To add some error check (also if it seems not to be necessary...)
+2do: To draw an icon!
+
+
+----[0.06]------------------------------------------------------------------------
+- It renames al *.ttf files in selected folder
+- Added browser to allow user to select folder
+- Now it's useful!
+
+Bug: It doesn't work if the user select a file system ancestor (for example c:\)
+
+
+----[0.05]------------------------------------------------------------------------
+- If in the same folder already exists a file with the font's name the  
+  string (2) is added. If more copies are present this become 3, 4...
+
+
+----[0.04]------------------------------------------------------------------------
+- Font's names are checked for invalid characters:
+  /\:*?"<>| are replaced with -
+
+
+----[0.03]------------------------------------------------------------------------
+- Added support for fonts with name encoded in language different than standard:
+  TrueType Renamer search for standard name; if not found it's satisfied with 
+  names in others languages
+- If a font's name end with space, this is removed.
+
+2do: Check the names for invalid characters /\:*?"<>|   (in that case actually 
+  the file is not renamed)
+
+
+----[0.02]------------------------------------------------------------------------
+- It renames selected file (only one file) with the real font's name
+- Added  .ttf extension
+
+2do: It doesn't work with some rare not standard font files (different language?)
+2do: Some fonts have names that end with space... it would be better to remove it
+
+
+----[0.01]------------------------------------------------------------------------
+- It works!
+- Can read the name of a font and display a Message Box with the name!
+
+
+
+(c) 1998 Fabrizio Giustina

@@ -1,0 +1,88 @@
+//
+// Symantec ResourceStudio generated header file
+//
+// This file is intended for use with Windows 95
+//
+
+#define APSTUDIO_READONLY_SYMBOLS
+#include <afxres.h>
+#include <ver.h>
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#include "resource.k"
+
+FINESTRA DIALOGEX MOVEABLE IMPURE LOADONCALL DISCARDABLE	38, 71, 226, 238, 0
+STYLE DS_ABSALIGN | 0x0004 | DS_CENTER | DS_CONTEXTHELP | WS_CAPTION | WS_THICKFRAME | WS_MINIMIZEBOX | WS_SYSMENU | WS_VISIBLE | WS_OVERLAPPED
+CAPTION "Truetype Renamer 2.0"
+MENU 102
+FONT 8, "Helv", 700, 0 /*FALSE*/
+BEGIN
+    DEFPUSHBUTTON   "Start!", 11, 	58,221,41,15, 0, , 0
+    CONTROL         "Progress Gauge", 3001, "MSCTLS_PROGRESS32", 0, 	7,121,214,9, , 0
+    EDITTEXT        3003, 	9,138,209,74, ES_AUTOVSCROLL | ES_MULTILINE | ES_WANTRETURN | ES_LEFT | DS_LOCALEDIT, , 0
+    GROUPBOX        "Filename style", 65535, 	15,13,75,65, WS_GROUP, , 0
+    CONTROL         "Delete duplicate", 3006, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 	112,15,90,10, , 0
+    CONTROL         "Recurse Subdirectory", 3007, "Button", BS_AUTOCHECKBOX | WS_TABSTOP, 	112,28,88,10, , 0
+    EDITTEXT        3008, 	17,102,146,12, ES_AUTOHSCROLL | ES_LEFT, , 0
+    PUSHBUTTON      "Save Log", 3009, 	165,222,50,14, 0, , 0
+    PUSHBUTTON      "...", 3011, 	203,100,15,14, 0, , 0
+    CONTROL         "FAT (HD)", 3013, "Button", BS_AUTORADIOBUTTON, 	23,30,60,10, , 0
+    CONTROL         "ISO (CD)", 3014, "Button", BS_AUTORADIOBUTTON | WS_GROUP, 	23,42,60,10, , 0
+	ICON			0, 65535	164,47,18,19, , 0
+END
+
+ABOUTBOX DIALOGEX MOVEABLE IMPURE LOADONCALL DISCARDABLE	10, 10, 201, 81, 0
+STYLE DS_SYSMODAL | DS_MODALFRAME | 0x0004 | WS_CAPTION | WS_SYSMENU | WS_VISIBLE | WS_POPUP
+CAPTION "About Truetype Renamer"
+FONT 8, "Helv", 700, 0 /*FALSE*/
+BEGIN
+    LTEXT           "Truetype Renamer 2.0 a", 65535, 	12,5,176,13, SS_LEFT, , 0
+    LTEXT           "Copyright (c) 1998-2000 Fabrizio Giustina", 65535, 	12,24,125,8, SS_LEFT, , 0
+    PUSHBUTTON      "OK", 1, 	78,61,47,12, 0, , 0
+	ICON	0, 65535	148,21,18,20, , 0
+END
+
+TTR ICON MOVEABLE PURE LOADONCALL DISCARDABLE "FILE0001.ICO"
+102	MENUEX MOVEABLE IMPURE LOADONCALL DISCARDABLE
+BEGIN
+    POPUP "&File", , , 0
+    BEGIN
+        MENUITEM "E&xit", 32002
+    END
+    POPUP "&Help", , , 0
+    BEGIN
+        MENUITEM "&About", 32003
+    END
+END
+
+1	VERSIONINFO	MOVEABLE IMPURE LOADONCALL DISCARDABLE
+  FILEVERSION	1,0,0,0
+  PRODUCTVERSION	1,0,0,0
+  FILEFLAGSMASK	VS_FFI_FILEFLAGSMASK
+  FILEFLAGS	VS_FF_SPECIALBUILD
+  FILEOS	VOS_DOS_WINDOWS32
+  FILETYPE	VFT_APP
+  FILESUBTYPE	0	// not used
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"	//Block: language ID = U.S. English, char set = Windows, Multilingual
+        BEGIN
+            VALUE	"CompanyName",	"F.G.\0"
+            VALUE	"FileDescription",	"A good application for renaming TrueType files!\0"
+            VALUE	"FileVersion",	"1.011b\0"
+            VALUE	"InternalName",	"TrueType Renamer\0"
+            VALUE	"OriginalFilename",	"TrueType Renamer.exe\0"
+            VALUE	"ProductName",	"TrueType Renamer\0"
+            VALUE	"ProductVersion",	"\0"
+            VALUE	"Comments",	"E-mailware! If you use this program send an e-mail to ttrenamer@hotmail.com\0"
+            VALUE	"LegalCopyright",	"Copyright © Fabrizio Giustina 1998\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE	"Translation", 0x0409, 1252
+    END
+END
+
+
